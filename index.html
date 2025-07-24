@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoKnight Industries – Knight Rider</title>
+ <style>
+    :root {
+      --accent-color: #ff0;
+    }
+
+    /* RESET & BASE */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #eee;
+      background: #111;
+      line-height: 1.6;
+    }
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    a:hover { opacity: 0.8; }
+    ul { list-style: none; }
+
+    /* BANNER */
+#banner {
+  background-color: #ff0000;
+  width: 100vw;                    /* span full viewport width */
+  margin-left: calc(-50vw + 50%);  /* keep it centered at full-bleed */
+  height: 98vh;
+  background-image: url('autoknight.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 100%;      /* image hugs left edge at full height */
+}
+
+    /* ALL OTHER SECTIONS */
+    section:not(#banner) {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* INTRO */
+    #intro header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    #intro header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+    #intro nav ul {
+      display: flex;
+      gap: 1.5rem;
+    }
+    #intro nav a {
+      font-weight: 500;
+    }
+
+    .hero-content {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .hero-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 12px #f00;
+    }
+    .hero-content p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #f00;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: #f00;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn-primary:hover { background: #c00; }
+
+    /* FEATURES GRID */
+    #features .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .feature-box {
+      background: #222;
+      padding: 1.5rem;
+      border-radius: 6px;
+    }
+    .feature-box h3 {
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+    .feature-box p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    /* SPECS TABLE */
+    #specs table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    #specs th, #specs td {
+      padding: 0.8rem 1rem;
+      border: 1px solid #333;
+      text-align: left;
+    }
+    #specs th {
+      background: #222;
+      color: var(--accent-color);
+    }
+
+    /* CONTACT FORM */
+    #contact form {
+      display: grid;
+      gap: 1rem;
+      max-width: 500px;
+      margin: 2rem auto;
+    }
+    #contact input,
+    #contact textarea {
+      padding: 0.8rem;
+      border: 1px solid #333;
+      border-radius: 4px;
+      background: #1a1a1a;
+      color: #eee;
+    }
+    #contact button {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: #666;
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FULL-WIDTH BANNER IMAGE -->
+  <section id="banner"></section>
+
+  <!-- INTRO: COMPANY, NAVIGATION & HERO -->
+  <section id="intro">
+    <header>
+      <h1>Welcome...</h1>
+      <nav>
+        <ul>
+          <li><a href="#intro">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#specs">Specs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="hero-content">
+      <h2>AutoKnight Industries Presents:</h2>
+      <p>Peace through a force beyond reckoning. The world's first fully autonomous, electric law enforcement cruiser.</p>
+      <a href="#contact" class="btn-primary">Reserve Your Fleet</a>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section id="features">
+    <h2>Core Capabilities</h2>
+    <div class="features">
+      <div class="feature-box">
+        <h3>Full-Spectrum Scanner</h3>
+        <p>Penetrates barriers, darkness, and radio noise to lock onto threats from miles away.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Solar-Powered Drive</h3>
+        <p>Unlimited patrol endurance under the sun—zero fossil-fuel reliance.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Swarm Intelligence</h3>
+        <p>Decentralized 6G AI network enabling hive-mind coordination across every unit.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Adaptive Armament</h3>
+        <p>Lasers, guided rockets, napalm pods, caltrops, 7.62 mm rotary guns, microwave jamming and active area denial—autonomously deployed on-the-fly.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Hydraulic Jump Boost</h3>
+        <p>Turbo-charged leaps that scale any obstacle.</p>
+      </div>
+	  <div class="feature-box">
+        <h3>Full Stealth</h3>
+        <p>Silent as a ghost. Completely invisible on radar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECS SECTION -->
+  <section id="specs">
+    <h2>Technical Specifications</h2>
+    <table>
+      <thead>
+        <tr><th>Parameter</th><th>Details</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Drive System</td><td>Tri-motor, solar array + ultra-capacitor banks</td></tr>
+        <tr><td>AI Core</td><td>6G Sentient Swarm Network</td></tr>
+        <tr><td>Active Sensors</td><td>0Hz – 3PHz full-spectrum array</td></tr>
+        <tr><td>Armament</td><td>Lasers, guided rockets, napalm pods, caltrops, 7.62 mm rotary guns, microwave jamming and active area denial, stealth</td></tr>
+        <tr><td>Vehicle Mass</td><td>2.4 tons (reinforced carbon-titanium and tungsten chassis)</td></tr>
+      </tbody>
+    </table>
+  </section>
+  
+    <!-- IMAGE CAROUSEL -->
+  <section id="carousel">
+    <h2>Gallery</h2>
+    <div class="carousel">
+      <button class="prev">&#10094;</button>
+      <div class="slides"></div>
+      <button class="next">&#10095;</button>
+      <div class="dots"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT / RESERVATION SECTION -->
+  <section id="contact">
+    <h2>Reserve Your Fleet</h2>
+    <p>Deployment slots for the inaugural wave are limited. Fill out the form below and our field command will reach out within 24 hours.</p>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="tel" placeholder="Contact Number" />
+      <textarea placeholder="Number of Units & Deployment Region" rows="4"></textarea>
+      <button type="submit" class="btn-primary">Submit Reservation</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2030 AutoKnight Industries | Privacy Policy | Terms of Service
+  </footer>
+  
+<script>
+  (function() {
+    // Hardcoded filenames
+    const anchors = ['1.png'];
+    const carouselEl = document.querySelector('.carousel');
+    const slidesEl = carouselEl.querySelector('.slides');
+    const dotsEl = carouselEl.querySelector('.dots');
+    let index = 0;
+
+    // Style slides container to show one image at a time at half-page width, centered
+    slidesEl.style.display = 'flex';
+    slidesEl.style.width = '50%';
+    slidesEl.style.margin = '0 auto';
+
+    // Move left/right buttons into a bottom control bar
+    const prevBtn = carouselEl.querySelector('.prev');
+    const nextBtn = carouselEl.querySelector('.next');
+
+    const ctrlBar = document.createElement('div');
+    ctrlBar.style.display = 'flex';
+    ctrlBar.style.justifyContent = 'center';
+    ctrlBar.style.gap = '1rem';
+    ctrlBar.style.margin = '1rem auto 0';
+    ctrlBar.appendChild(prevBtn);
+    ctrlBar.appendChild(nextBtn);
+
+    // Append control bar just before the dots
+    carouselEl.insertBefore(ctrlBar, dotsEl);
+
+    // Build slides & dots
+    anchors.forEach((file, i) => {
+      const img = document.createElement('img');
+      img.src = 'pics/' + file;
+      img.style.width = '100%';
+      img.style.flexShrink = '0';
+      slidesEl.appendChild(img);
+
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      if (i === 0) dot.classList.add('active');
+      dot.style.cursor = 'pointer';
+      dot.addEventListener('click', () => showSlide(i));
+      dotsEl.appendChild(dot);
+    });
+
+    // Function to show a given slide
+    function showSlide(i) {
+      const count = anchors.length;
+      index = (i + count) % count;
+      slidesEl.style.transform = `translateX(-${index * 100}%)`;
+      dotsEl.querySelectorAll('.dot').forEach((d, di) => {
+        d.classList.toggle('active', di === index);
+      });
+    }
+
+    // Initialize carousel
+    showSlide(0);
+
+    // Arrow controls
+    //nextBtn.addEventListener('click', () => showSlide(index + 1));
+   // prevBtn.addEventListener('click', () => showSlide(index - 1));
+  })();
+</script>
+
+</body>
+</html>
